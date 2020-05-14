@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link href="css/home.css" rel="stylesheet" type="text/css"  >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Product</title>
+</head>
+<body onload="getProducts()">
+<script type="text/javascript" src="js/userscript.js" ></script>
+<div class="header">
+  <a href="#default" class="logo">Shopping Cart</a>
+  <div class="header-right">
+   <!--  <div class="sptext"> -->
+   <a href="#" >CustomerName:<b><span id="spid"></span></b> </a> 
+ 	<span id="spid"></span>
+ 	<!-- </div> -->
+    <!-- <a class="active" href="#login" >CustomerName:<b></b> </a> -->
+    <a class="active" href="#signOut" >SignOut</a>
+  </div>
+</div>
+<h2>Product Page:</h2>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+var sessiondata=JSON.parse(JSON.stringify(sessionStorage.getItem("uname")));
+alert("Your Logging In : "+sessiondata);
+document.getElementById('spid').innerText=sessiondata;
+
+if(sessiondata===undefined ||sessiondata===null || sessiondata===''){
+	alert("Please Login Again");
+	window.location.assign("index.html");
+}
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
