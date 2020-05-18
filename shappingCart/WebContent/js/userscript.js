@@ -28,8 +28,10 @@ function addUser() {
 }
 //User Login
 function userLogin(){
-	 var uName = document.getElementById("uName").value; 
-	 var password = document.getElementById("password").value;
+	 
+	 
+	const uName = document.getElementById("uName").value; 
+	const password = document.getElementById("password").value;
 	 debugger;
 	 var httpReq;
 	    if(window.XMLHttpRequest) {
@@ -39,10 +41,10 @@ function userLogin(){
 	    }
 	    httpReq.onreadystatechange = function() {
 	    	
-	        //if(this.readyState ===4 && this.status === 200){ 
+	        if(this.readyState ===4 && this.status === 200){ 
 	            //console.log("response: "+this.response);
-	            var data=JSON.parse(this.response);
-	            console.log("data: "+data+" data.id: "+data.id);
+	            var data=JSON.parse(JSON.stringify(this.response));
+	            console.log("data: "+data);
 	            debugger;
 		    	var len=data.length;
 		    	//alert("len: "+len);
@@ -54,7 +56,7 @@ function userLogin(){
 		    		alert("Login Failed");
 		    	}
 	            
-	        //}
+	        }
 	    }
 	    var obj={uname:uName,psw:password};
 	    console.log(obj);
@@ -78,6 +80,7 @@ function getProducts(){
                 tableEl[0].remove()
             }
             var table = document.createElement("table");
+            table.setAttribute("id","tab01");
 
             var tbody = document.createElement("tbody");
 
@@ -88,45 +91,28 @@ function getProducts(){
             var td1 = document.createElement("td");
             var thName1 = document.createTextNode("product Name");
             td1.append(thName1);
-            td1.style.border = "5px solid black";
-            td1.style.backgroundColor = "1px solid grey";
 
             var td2 = document.createElement("td");
             var thMNo = document.createTextNode("Price");
             td2.append(thMNo);
-            td2.style.border = "5px solid black";
-            td2.style.backgroundColor = "1px solid grey";
 
             var td3 = document.createElement("td");
             var thSapId = document.createTextNode("Description");
             td3.append(thSapId);
-            td3.style.border = "5px solid black";
 
             var td4 = document.createElement("td");
             var thEmail = document.createTextNode("Rating");
             td4.append(thEmail);
-            td4.style.border = "5px solid black";
 
 
             var td5 = document.createElement("td");
             var thGender = document.createTextNode("Quantity");
             td5.append(thGender);
-            td5.style.border = "5px solid black";
 
             var td7 = document.createElement("td");
             var action = document.createTextNode("Action");
             td7.append(action);
-            td7.style.border = "5px solid black";
 
-            /*var td6 = document.createElement("td");
-            var thId = document.createTextNode("Id");
-            td6.append(thId);
-            td6.style.border = "5px solid black";*/
-
-            table.style.border = "5px solid black";
-           
-            
-          
             tr.append(td1);
             tr.append(td2);
             tr.append(td3);
@@ -146,11 +132,6 @@ function getProducts(){
                 for (var i = 0; i < length; i++) {
 
                     var tableBody = document.createElement("tr");
-                   
-                   /* var td1Body = document.createElement("td");
-                    var textNode1 = document.createTextNode(data[i].id);
-                    td1Body.append(textNode1);*/
-
                     var td2Body = document.createElement("td");
                     var textNode2 = document.createTextNode(data[i].pname);
                     td2Body.append(textNode2);
@@ -175,6 +156,7 @@ function getProducts(){
                     var td7Body = document.createElement("td");
                     var addCartButton = document.createElement("button");
                     var addCartButtonTextNode = document.createTextNode("Add Cart");
+                    addCartButton.setAttribute("class","ubutton");
                     addCartButton.appendChild(addCartButtonTextNode);
                     
                     addCartButton.addEventListener("click", function () {
@@ -208,6 +190,7 @@ function getProducts(){
                     });
                     var orderButton = document.createElement("button");
                     var orderButtonTextNode = document.createTextNode("Order");
+                    orderButton.setAttribute("class","ubutton");
                     orderButton.appendChild(orderButtonTextNode);
                     orderButton.addEventListener("click", function () {
                         var data = this.parentElement.parentElement.cells;
@@ -238,12 +221,6 @@ function getProducts(){
                     td7Body.append(addCartButton);
                     td7Body.append(orderButton);
 
-                    //td1Body.style.border = "1px solid black";
-                    td2Body.style.border = "1px solid black";
-                    td3Body.style.border = "1px solid black";
-                    td4Body.style.border = "1px solid black";
-                    td5Body.style.border = "1px solid black";
-                    td6Body.style.border = "1px solid black";
 
                    // tableBody.append(td1Body);
                     tableBody.append(td2Body);
@@ -290,7 +267,7 @@ function mycarts(){
                 tableEl[0].remove()
             }
             var table = document.createElement("table");
-
+            table.setAttribute("id", "tab01");
             var tbody = document.createElement("tbody");
 
             var thead = document.createElement("thead");
@@ -300,41 +277,32 @@ function mycarts(){
             var td2 = document.createElement("td");
             var thMNo = document.createTextNode("Product Name");
             td2.append(thMNo);
-            td2.style.border = "5px solid black";
-            td2.style.backgroundColor = "1px solid grey";
 
             var td3 = document.createElement("td");
             var thSapId = document.createTextNode("Price");
             td3.append(thSapId);
-            td3.style.border = "5px solid black";
 
             var td4 = document.createElement("td");
             var thEmail = document.createTextNode("Description");
             td4.append(thEmail);
-            td4.style.border = "5px solid black";
 
 
             var td5 = document.createElement("td");
             var thGender = document.createTextNode("Rating");
             td5.append(thGender);
-            td5.style.border = "5px solid black";
 
             var td6 = document.createElement("td");
             var thId = document.createTextNode("PId");
             td6.append(thId);
-            td6.style.border = "5px solid black";
 
             var td7 = document.createElement("td");
             var thQuantity = document.createTextNode("Quantity");
             td7.append(thQuantity);
-            td7.style.border = "5px solid black";
 
             var td8 = document.createElement("td");
             var thAction= document.createTextNode("Action");
             td8.append(thAction);
-            td8.style.border = "5px solid black";
 
-            table.style.border = "5px solid black";
            
             tr.append(td2);
             tr.append(td3);
@@ -387,6 +355,7 @@ function mycarts(){
                     orderButton.addEventListener("click", function () {
                         var data = this.parentElement.parentElement.cells;
                         var obj = { pid: data[0].innerHTML, pname: data[1].innerHTML, price: data[2].innerHTML, description: data[3].innerHTML, rating: data[4].innerHTML, quantity: data[5].innerHTML ,date: data[5].innerHTML,uname: data[5].innerHTML}
+                        console.log("obj: "+obj);
                         localStorage.setItem("orderItem", JSON.stringify(obj));
                         myOrders();
                         //deleteCart();
@@ -399,13 +368,6 @@ function mycarts(){
                    td8Body.append(orderButton);
 
                    // td1Body.style.border = "1px solid black";
-                    td2Body.style.border = "1px solid black";
-                    td3Body.style.border = "1px solid black";
-                    td4Body.style.border = "1px solid black";
-                    td5Body.style.border = "1px solid black";
-                    td6Body.style.border = "1px solid black";
-                    td7Body.style.border = "1px solid black";
-                    td8Body.style.border = "1px solid black";
 
                    // tableBody.append(td1Body);
                     tableBody.append(td2Body);
@@ -460,6 +422,7 @@ function myOrderList(){
 	                tableEl[0].remove()
 	            }
 	            var table = document.createElement("table");
+	            table.setAttribute("id", "tab01");
 
 	            var tbody = document.createElement("tbody");
 
@@ -467,55 +430,35 @@ function myOrderList(){
 
 	            var tr = document.createElement("tr");
 
-	           /* var td1 = document.createElement("td");
-	            var thName1 = document.createTextNode("Id");
-	            td1.append(thName1);
-	            td1.style.border = "5px solid black";
-	            td1.style.backgroundColor = "1px solid grey";*/
-
-	            
-
 	            var td2 = document.createElement("td");
 	            var thMNo = document.createTextNode("Product Name");
 	            td2.append(thMNo);
-	            td2.style.border = "5px solid black";
-	            td2.style.backgroundColor = "1px solid grey";
 
 	            var td3 = document.createElement("td");
 	            var thSapId = document.createTextNode("Price");
 	            td3.append(thSapId);
-	            td3.style.border = "5px solid black";
 
 	            var td4 = document.createElement("td");
 	            var thEmail = document.createTextNode("Description");
 	            td4.append(thEmail);
-	            td4.style.border = "5px solid black";
 
 
 	            var td5 = document.createElement("td");
 	            var thGender = document.createTextNode("Rating");
 	            td5.append(thGender);
-	            td5.style.border = "5px solid black";
 
 	            var td6 = document.createElement("td");
 	            var thId = document.createTextNode("PId");
 	            td6.append(thId);
-	            td6.style.border = "5px solid black";
 
 	            var td7 = document.createElement("td");
 	            var thQuantity = document.createTextNode("Quantity");
 	            td7.append(thQuantity);
-	            td7.style.border = "5px solid black";
 
 	            var td8 = document.createElement("td");
 	            var thAmount = document.createTextNode("Amount");
 	            td8.append(thAmount);
-	            td8.style.border = "5px solid black";
 
-	            table.style.border = "5px solid black";
-	           
-	            
-	          
 	           // tr.append(td1);
 	            tr.append(td2);
 	            tr.append(td3);
@@ -569,19 +512,6 @@ function myOrderList(){
 	                    td8Body.append(textNode8);
 
 
-	                   
-	                   // orderButton.appendChild(orderButtonTextNode);
-	                    
-
-	                    td1Body.style.border = "1px solid black";
-	                    td2Body.style.border = "1px solid black";
-	                    td3Body.style.border = "1px solid black";
-	                    td4Body.style.border = "1px solid black";
-	                    td5Body.style.border = "1px solid black";
-	                    td6Body.style.border = "1px solid black";
-	                    td7Body.style.border = "1px solid black";
-	                    td8Body.style.border = "1px solid black";
-
 	                    tableBody.append(td1Body);
 	                    tableBody.append(td2Body);
 	                    tableBody.append(td3Body);
@@ -615,9 +545,6 @@ function myOrderList(){
 	   httpRequest.open("get", url, true);
 	    httpRequest.send();
 }
-
-
-
 
 //myOrders
 function myOrders(){
@@ -663,7 +590,6 @@ function myOrders(){
 	
 }
 
-
 function deleteCart(){
 	var data=this.parentElement.parentElement.cells;
 	var xmlhttp;
@@ -672,7 +598,7 @@ function deleteCart(){
 	}
 	xmlhttp.onreadystatechange= function(){
 		if(this.status === 200 && this.readyState===4){
-			alert(" Cart Deleted Successfully");
+			alert("Cart Deleted Successfully");
 			getData();
 			
 		}

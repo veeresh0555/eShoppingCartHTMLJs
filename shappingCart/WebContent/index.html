@@ -19,6 +19,7 @@
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
   <div class="modal-content">
+  <form onsubmit="return false">
     <div class="container">
       <h1>Sign Up</h1>
       <p>Please fill in this form to create an account.</p>
@@ -42,10 +43,11 @@
       <input type="email" id="email" pattern="[a-z0-9._%+-]+@hcl.com" placeholder="Enter Email" name="email" required>
 
       <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
         <button type="submit" class="signupbtn" onclick="addUser()" >Sign Up</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       </div>
     </div>
+    </form>
   </div>
 </div>
 
@@ -55,14 +57,14 @@
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img_avatar.png" alt="Avatar" class="avatar">
     </div>
-	<form class="modal-content" onsubmit="userLogin()" >
+	<form class="modal-content" onsubmit="return false" >
     <div class="container">
       <label for="uname"><b>User Name</b></label>
       <input type="text" placeholder="Enter Username" id="uName" name="uName" required>
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" id="password" name="password" required>
        <div class="clearfix"> 
-       <button type="submit" class="signupbtn" id="signupbtn" >Login</button>
+       <button type="submit" class="signupbtn" id="signupbtn" onclick="userLogin()" >Login</button>
        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
       </div>
     </div>

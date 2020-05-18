@@ -57,6 +57,26 @@
       "date": "14-05-2020",
       "uname": "venkatesh",
       "id": 2
+    },
+    {
+      "pname": "mobile",
+      "price": "5000",
+      "description": "VIVO",
+      "rating": "5",
+      "quantity": "1",
+      "date": "18-05-2020",
+      "uname": "veeru",
+      "id": 3
+    },
+    {
+      "pname": "mobile",
+      "price": "5000",
+      "description": "VIVO",
+      "rating": "5",
+      "quantity": "1",
+      "date": "18-05-2020",
+      "uname": "veeru",
+      "id": 4
     }
   ],
   "orders": [
@@ -80,6 +100,26 @@
       "date": "14-05-2020",
       "uname": "venkatesh",
       "id": 2
+    },
+    {
+      "pname": "mobile",
+      "price": "5000",
+      "description": "VIVO",
+      "rating": "5",
+      "quantity": "1",
+      "date": "18-05-2020",
+      "uname": "veeru",
+      "id": 3
+    },
+    {
+      "pname": "mobile",
+      "price": "5000",
+      "description": "VIVO",
+      "rating": "5",
+      "quantity": "1",
+      "date": "18-05-2020",
+      "uname": "veeru",
+      "id": 4
     }
   ]
 }
