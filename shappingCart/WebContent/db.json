@@ -15,6 +15,29 @@
       "mobileNo": "9874563215",
       "email": "venkatesh@hcl.com",
       "id": 2
+    },
+    [
+      "meena",
+      "meena",
+      "F",
+      "9687458745",
+      "meena@hcl.com"
+    ],
+    {
+      "uname": "sonali",
+      "psw": "sonali",
+      "gender": "F",
+      "mobileNo": "9587415745",
+      "email": "sonali@hcl.com",
+      "id": 4
+    },
+    {
+      "uname": "dfsdf",
+      "psw": "ddfgfgg",
+      "gender": "M",
+      "mobileNo": "3554587458",
+      "email": "asdas@hcl.com",
+      "id": 5
     }
   ],
   "products": [

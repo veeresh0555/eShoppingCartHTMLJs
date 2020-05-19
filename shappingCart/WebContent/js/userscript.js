@@ -1,12 +1,14 @@
-//Add user
+//Add user-User goes register throgh this method
 function addUser() {
 	debugger;
     let uName = document.getElementById("uname").value; 
+    //let uname = document.getElementById("uname").value; 
     let psw = document.getElementById("psw").value;
     let gender = document.getElementById("gender").value;
     let mobileNo = document.getElementById("mobileNo").value;
     let email = document.getElementById("email").value;
     let obj = {uname : uName, psw : psw, gender:gender, mobileNo:mobileNo, email:email};
+   // let obj = [uName,psw,gender,mobileNo,email];
     console.log(obj);
     let httpReq;
     if(window.XMLHttpRequest) {
@@ -19,7 +21,7 @@ function addUser() {
         if(this.readyState ===4 && this.status === 201){ 
             console.log("response: "+this.response);
             alert("User Register Successfully!!!")
-            window.location.assign("index.html#login");
+            window.location.assign("index.html");
         }
     }
     httpReq.open('post', 'http://localhost:3000/users', true);

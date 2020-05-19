@@ -5,14 +5,14 @@
 <title>HomePage</title>
 <link href="css/home.css" rel="stylesheet" type="text/css"  >
 </head>
-<body onload="document.getElementById('id01').style.display='block'">
+<body onload="document.getElementById('id02').style.display='block'">
 <script type="text/javascript" src="js/userscript.js" ></script>
 <!-- <a  href="#home">Track Order</a> -->
 <div class="header">
   <a href="#default" class="logo">Shopping Cart</a>
   <div class="header-right" id="header-rightid">
-    <a href="#login" class="simodel" onclick="signInModel()" >Login</a>
-    <a href="#signup" class="simodel active" onclick="signupModel()" >SignUp</a>
+    <a href="#login" class="simodel active" onclick="signInModel()" >Login</a>
+    <a href="#signup" class="simodel" onclick="signupModel()" >SignUp</a>
   </div>
 </div>
 
@@ -83,7 +83,7 @@ var model2 = document.getElementById('id02');
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
 	
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.style.display = "none";
     model2.style.display="none";
   }
@@ -92,7 +92,6 @@ window.onclick = function(event) {
 function signupModel(){
 		document.getElementById('id01').style.display='block';
 		document.getElementById('id02').style.display='none';
-	
 	}
 function signInModel(){
 	document.getElementById('id02').style.display='block';
