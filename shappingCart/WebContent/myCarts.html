@@ -12,16 +12,16 @@
   <a href="#default" class="logo">Shopping Cart</a>
   <div class="header-right">
    <a href="#" >CustomerName:<b><span id="spid"></span></b> </a> 
+   <a href="product.html" >Products</a>
     <a href="myOrders.html" >My Orders</a>
     <a class="active" href="#" >My Carts</a>
-    <a href="#" >SignOut</a>
+    <a href="#" onclick="logout()" >SignOut</a>
   </div>
 </div>
 <h2>My Carts:</h2>
 
 <script type="text/javascript">
 var sessiondata=JSON.parse(JSON.stringify(sessionStorage.getItem("uname")));
-alert("Your Logging In : "+sessiondata);
 document.getElementById('spid').innerText=sessiondata;
 
 if(sessiondata===undefined ||sessiondata===null || sessiondata===''){

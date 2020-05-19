@@ -5,14 +5,14 @@
 <title>HomePage</title>
 <link href="css/home.css" rel="stylesheet" type="text/css"  >
 </head>
-<body>
+<body onload="document.getElementById('id01').style.display='block'">
 <script type="text/javascript" src="js/userscript.js" ></script>
 <!-- <a  href="#home">Track Order</a> -->
 <div class="header">
   <a href="#default" class="logo">Shopping Cart</a>
-  <div class="header-right">
-    <a class="active" href="#login" onclick="signInModel()" >Login</a>
-    <a href="#signup" onclick="signupModel()" >SignUp</a>
+  <div class="header-right" id="header-rightid">
+    <a href="#login" class="simodel" onclick="signInModel()" >Login</a>
+    <a href="#signup" class="simodel active" onclick="signupModel()" >SignUp</a>
   </div>
 </div>
 
@@ -98,6 +98,18 @@ function signInModel(){
 	document.getElementById('id02').style.display='block';
 	document.getElementById('id01').style.display='none';
 }
+
+var header = document.getElementById("header-rightid");
+var btns = header.getElementsByClassName("simodel");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+
+
 </script>
 </body>
 </html>

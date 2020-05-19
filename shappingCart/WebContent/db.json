@@ -77,6 +77,36 @@
       "date": "18-05-2020",
       "uname": "veeru",
       "id": 4
+    },
+    {
+      "pname": "mobile",
+      "price": "5000",
+      "description": "VIVO",
+      "rating": "5",
+      "quantity": "1",
+      "id": "<button class=\"ubutton\">Add Cart</button><button class=\"ubutton\">Order</button>",
+      "date": "19-05-2020",
+      "uname": "veeru"
+    },
+    {
+      "pname": "laptop",
+      "price": "10000",
+      "description": "Dell Laptop",
+      "rating": "4",
+      "quantity": "1",
+      "date": "19-05-2020",
+      "uname": "veeru",
+      "id": 5
+    },
+    {
+      "pname": "laptop",
+      "price": "10000",
+      "description": "Dell Laptop",
+      "rating": "4",
+      "quantity": "1",
+      "date": "19-05-2020",
+      "uname": "veeru",
+      "id": 6
     }
   ],
   "orders": [
@@ -120,6 +150,76 @@
       "date": "18-05-2020",
       "uname": "veeru",
       "id": 4
+    },
+    {
+      "pname": "mobile",
+      "price": "5000",
+      "description": "VIVO",
+      "rating": "5",
+      "quantity": "1",
+      "date": "19-05-2020",
+      "uname": "veeru",
+      "id": 5
+    },
+    {
+      "pname": "5000",
+      "price": "VIVO",
+      "description": "5",
+      "rating": "1",
+      "quantity": "<button>Order Item</button>",
+      "date": "<button>Order Item</button>",
+      "uname": "<button>Order Item</button>",
+      "id": 6
+    },
+    {
+      "pname": "10000",
+      "price": "Dell Laptop",
+      "description": "4",
+      "rating": "1",
+      "quantity": "<button>Order Item</button>",
+      "date": "<button>Order Item</button>",
+      "uname": "<button>Order Item</button>",
+      "id": 7
+    },
+    {
+      "pname": "5000",
+      "price": "VIVO",
+      "description": "5",
+      "rating": "1",
+      "quantity": "<button>Order Item</button>",
+      "date": "<button>Order Item</button>",
+      "uname": "<button>Order Item</button>",
+      "id": 8
+    },
+    {
+      "pname": "10000",
+      "price": "Dell Laptop",
+      "description": "4",
+      "rating": "1",
+      "quantity": "<button>Order Item</button>",
+      "date": "<button>Order Item</button>",
+      "uname": "<button>Order Item</button>",
+      "id": 9
+    },
+    {
+      "pname": "10000",
+      "price": "Dell Laptop",
+      "description": "4",
+      "rating": "1",
+      "quantity": "<button>Order Item</button>",
+      "date": "<button>Order Item</button>",
+      "uname": "<button>Order Item</button>",
+      "id": 10
+    },
+    {
+      "pname": "10000",
+      "price": "Dell Laptop",
+      "description": "4",
+      "rating": "1",
+      "quantity": "<button>Order Item</button>",
+      "date": "<button>Order Item</button>",
+      "uname": "<button>Order Item</button>",
+      "id": 11
     }
   ]
 }
