@@ -38,6 +38,22 @@
       "mobileNo": "3554587458",
       "email": "asdas@hcl.com",
       "id": 5
+    },
+    {
+      "uName": "erqwrqwer",
+      "psw": "ewrweqrw",
+      "gender": "M",
+      "mobileNo": "6543212345",
+      "email": "tertewr@hcl.com",
+      "id": 6
+    },
+    {
+      "uName": "hfgfhfg123",
+      "psw": "ewrweqrwer",
+      "gender": "M",
+      "mobileNo": "987456321",
+      "email": "abcxyz@hcl.com",
+      "id": 7
     }
   ],
   "products": [
